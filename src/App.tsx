@@ -151,7 +151,7 @@ const App: React.FC = () => {
           <img src="/images/header_logo.png" width="50px" height="50px" style={{float: 'left', marginTop: '5px'}}></img>
         </a>
         <a href="/">
-          <Title style={ { 'color': '#eee', marginTop: '10px' } as React.CSSProperties }>Partyamt</Title>>
+          <Title style={ { 'color': '#eee', marginTop: '10px' } as React.CSSProperties }>Partyamt</Title>
         </a>
       </Header>
       <Layout>
