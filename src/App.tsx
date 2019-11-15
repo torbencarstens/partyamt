@@ -132,7 +132,24 @@ const Events: React.FC<{tagFilter: ITag[]}> = ({ tagFilter }) => {
 
 const Filter: React.FC<{tags : ITag[], selected: ITag[], callback: any}> = ({ tags, selected, callback }) => {
   return <List>
-    {tags.sort((t1, t2) => t1.name.localeCompare(t2.name)).map((tag: ITag) => <List.Item><CheckableTag style={{ "backgroundColor": "#fff" }} checked={selected.includes(tag)} onChange={(checked) => callback( checked ? selected.concat(tag) : selected.filter((t: ITag) => t.name !== tag.name))}>{ tag.name }</CheckableTag></List.Item>)}
+    {tags
+      .sort((t1, t2) => 
+        t1.name.localeCompare(t2.name))
+      .map((tag: ITag) => 
+        <List.Item>
+          <CheckableTag
+            style={{
+              'color': selected.includes(tag) ? '#004569' : "#888"
+            }}
+            checked={selected.includes(tag)} 
+            onChange={(checked) => 
+              callback( checked ? 
+                selected.concat(tag) : 
+                selected.filter((t: ITag) => 
+                  t.name !== tag.name))}>
+            { tag.name }
+          </CheckableTag>
+        </List.Item>)}
   </List>
 }
 
