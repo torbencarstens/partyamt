@@ -146,7 +146,14 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Layout>
-      <Header style={{backgroundColor: '#004569'}}><Title style={ { 'color': '#eee', marginTop: '10px' } as React.CSSProperties }>Partyamt</Title>></Header>
+      <Header style={{backgroundColor: '#004569'}}>
+        <a href="/">
+          <img src="/images/header_logo.png" width="50px" height="50px" style={{float: 'left', marginTop: '5px'}}></img>
+        </a>
+        <a href="/">
+          <Title style={ { 'color': '#eee', marginTop: '10px' } as React.CSSProperties }>Partyamt</Title>>
+        </a>
+      </Header>
       <Layout>
         <Sider theme="light">
         <Query query={tagsQuery}>
@@ -158,7 +165,6 @@ const App: React.FC = () => {
                 return <Filter tags={data.tags} selected={tagFilter} callback={setTagFilter} />
               }
             }}
-            
           </Query>
         </Sider>
         <Content>
