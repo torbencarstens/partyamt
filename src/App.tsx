@@ -13,8 +13,10 @@ const { Header, Footer, Content, Sider } = Layout;
 const eventsQuery = gql`
 {
   events {
+    id
     title
     location {
+      id
       name
       mapsLink
       website
@@ -22,6 +24,7 @@ const eventsQuery = gql`
     price
     icsLink
     tags {
+      id
       name
     }
     url
