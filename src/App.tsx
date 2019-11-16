@@ -122,7 +122,7 @@ const Events: React.FC<{tagFilter: ITag[]}> = ({ tagFilter }) => {
       } else if (error) {
         return <div>Error</div>
       } else {
-        return <Card>
+        return <Card bodyStyle={{ display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
           {
             data
               .events
