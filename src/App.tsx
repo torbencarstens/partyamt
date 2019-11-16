@@ -40,6 +40,14 @@ const tagsQuery = gql`
 }
 `;
 
+const locationsQuery = gql`
+{
+  locations {
+    name
+  }
+}
+`;
+
 interface ILocation {
   name: string,
   mapsLink: string,
