@@ -1,4 +1,4 @@
-import { Card, Typography, Icon, Tooltip, Row, Col, Tag, Layout, List} from 'antd';
+import { Card, Typography, Icon, Tooltip, Row, Col, Tag, Layout, List, Spin} from 'antd';
 import { gql } from 'apollo-boost';
 import React, { useState, useEffect } from 'react';
 import { Query } from 'react-apollo';
@@ -110,7 +110,7 @@ const Events: React.FC<{tagFilter: ITag[]}> = ({ tagFilter }) => {
   return <Query query={eventsQuery}>
     { ( {loading, error, data} ) => {
       if (loading) {
-        return <div>Loading</div>
+        return <div><Spin /></div>
       } else if (error) {
         return <div>Error</div>
       } else {
